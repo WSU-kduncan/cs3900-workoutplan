@@ -29,6 +29,33 @@
 
 ## Solution Overview
 
-> Provide a high-level overview of the solution your MVP will offer.
+> Provide a high-level overview of the solution your MVP will offer. 
+
+* A person will be able to record workouts.
+* Each workout will have statistics that need to be added about the logistics of the run
+* After completing the workout and adding the data, the user will reflect on the activity
+* A basic idea of the conceptual model is shown below with more specifics
+
+* Entity 1: Person
+   * Attribute 1: Stats/Records
+   * Attribute 2: Gender
+   * Attribute 3: Age
+   * Attribute 4: Weight
+   * Attribute 5: Height
+* Entity 2: Workouts
+   * Attribute 1: Mile Splits
+   * Attribute 2: Type of Run
+   * Attribute 3: Run ID (Primary Key)
+   * Attribute 4: Time of Day
+   * Attribute 5: Pace
+   * Attribute 6: Location
+   * Attribute 7: Distance
+   * Attribute 8: Data
+* Entity 3: Evaluation
+   * Attribute 1: Weather Acclimation Score (0-10)
+   * Attribute 2: Heart Rate (Can be null)
+   * Attribute 3: Overall Rating Score (0-10)
+   * Attribute 4: Comments
+   * Attribute 5: Weekly total mileage
 
 ***
