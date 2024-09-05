@@ -1,8 +1,8 @@
 # MVP \- Analyze the Business Needs
 
-Team Name: Running Application Team
-Team Members:  Chase Ennis
-Project Name: Workout Plan Team
+* Team Name: Running Application Team
+* Team Members: Chase Ennis, Conor Fanning, Blake Colegrove
+* Project Name: Workout Plan Team
 
 ## Problem Statement
 
