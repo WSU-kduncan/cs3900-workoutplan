@@ -1,6 +1,6 @@
 # MVP \- Analyze the Business Needs
 
-Team Name:  
+Team Name: Running Application Team
 Team Members:  Chase Ennis
 Project Name: Workout Plan Team
 
