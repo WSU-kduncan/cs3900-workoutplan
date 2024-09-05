@@ -6,7 +6,7 @@ Project Name: Workout Plan Team
 
 ## Problem Statement
 
-> Runners want to be able to have a simple digital tracking application to store and analyze their workouts      	
+> Runners want to be able to have a simple digital tracking application to store and analyze their runs	
 
 *** 
 
