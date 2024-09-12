@@ -23,7 +23,7 @@
 
 ## Target Audience
 
-> The target audience are runners. Example: a Cross Country Coach may request his/her athletes to track the workouts they have completed.
+> The target audience are runners who want a structured way to store their runs. Example: a Cross Country Coach may request his/her athletes to track the workouts they have completed.
 
 ***
 
@@ -43,19 +43,14 @@
    * Attribute 4: Weight
    * Attribute 5: Height
 * Entity 2: Workouts
-   * Attribute 1: Mile Splits
-   * Attribute 2: Type of Run
-   * Attribute 3: Run ID (Primary Key)
-   * Attribute 4: Time of Day
-   * Attribute 5: Pace
-   * Attribute 6: Location
-   * Attribute 7: Distance
-   * Attribute 8: Data
+   * Attribute 1: Workout Type
 * Entity 3: Evaluation
-   * Attribute 1: Weather Acclimation Score (0-10)
-   * Attribute 2: Heart Rate (Can be null)
-   * Attribute 3: Overall Rating Score (0-10)
-   * Attribute 4: Comments
-   * Attribute 5: Weekly total mileage
+   * Attribute 1: Time
+   * Attribute 2: Date
+   * Attribute 3: Location
+   * Attribute 4: Distance
+   * Attribute 5: AverageHeartRate
+   * Attribute 6: feelScore
+   * Attribute 7: Comments
 
 ***
