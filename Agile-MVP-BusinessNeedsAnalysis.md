@@ -15,9 +15,8 @@
 > To give runners a clean, simple interface to store runs in an organized fashion by date, so that they can go back and view what they have done in past dates. We strive to eliminate the headache of data keeping and help runners focus on running!
 
 > Outline the key objectives of the MVP
-1. Allow Runners to Add Workouts
-2. Allow runners to Reflect on their workouts and add statistics about them
-3. Allow runners to see past workouts
+   * 85% of users can enter workouts, and see past workout they have logged without training
+   * 15% reduction of time spent organizing workouts by paper/pencil route over the course of 6 months
 
 *** 
 
