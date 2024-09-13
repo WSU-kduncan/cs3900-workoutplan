@@ -22,7 +22,7 @@
 
 ## Target Audience
 
-> The target audience are runners who want a structured way to store their runs. Example: a Cross Country Coach may request his/her athletes to track the workouts they have completed.
+> The target audience are runners who want a structured way to store their runs. Example: a Cross Country Coach may request his/her athletes to track the workouts they have completed, so they can ask them about it.
 
 ***
 
@@ -30,26 +30,4 @@
 
 > Provide a high-level overview of the solution your MVP will offer. 
 
-* A person will be able to record workouts.
-* Each workout will have statistics that need to be added about the logistics of the run
-* After completing the workout and adding the data, the user will reflect on the activity
-* A basic idea of the conceptual model is shown below with more specifics
-
-* Entity 1: Person
-   * Attribute 1: Stats/Records
-   * Attribute 2: Gender
-   * Attribute 3: Age
-   * Attribute 4: Weight
-   * Attribute 5: Height
-* Entity 2: Workouts
-   * Attribute 1: Workout Type
-* Entity 3: Evaluation
-   * Attribute 1: Time
-   * Attribute 2: Date
-   * Attribute 3: Location
-   * Attribute 4: Distance
-   * Attribute 5: AverageHeartRate
-   * Attribute 6: feelScore
-   * Attribute 7: Comments
-
-***
+* Workout ap is a software a
