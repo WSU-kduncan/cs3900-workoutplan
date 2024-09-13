@@ -20,7 +20,7 @@
 * The target customers for Workout App are runners who want a way to keep track of what they have run from this point forward.
 * The goals for Workout App:
    * 85% of users can enter workouts, and see past workout they have logged without training
-   * 25% reduction of time spent organizing workouts by paper/pencil route
+   * 15% reduction of time spent organizing workouts by paper/pencil route over the course of 6 months
 
 ### Assumptions
 
