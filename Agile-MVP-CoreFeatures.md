@@ -17,6 +17,7 @@ Project Name: Workout App
 ## User Flow
 
 * ![flowchart](images/flowchart.png)
+* Very simple idea of how this will work
 
 
 ## User Stories
@@ -30,9 +31,14 @@ Project Name: Workout App
 ## Risks and Mitigations
 
 > Identify potential risks associated with MVP development and launch.
+* Runners often complain about drowning in data.
+* Not all runners have access to certain data metrics
+* Runners do not want to enter the where they are running for privacy reasons.
 
 
 > Suggest strategies for mitigating these risks.
+* Keeping the evaluation tab simple where users can enter the data that they have and are not forced to enter fields they do not want to
+* We plan on having a location field, but this also can be left blank if it makes the runner feel more comfortable.
 
 *** 
 
@@ -41,3 +47,6 @@ Project Name: Workout App
 ## Feedback and Iteration
 
 > Describe how user feedback will be collected and analyzed.
+
+* After 3 months, we will prompt users with a feedback survey
+* We want to give them enough time to use the app, since one of the major features is viewing past runs. We want to let them accumulate a bank of past runs and test this feature before asking for feedback.
