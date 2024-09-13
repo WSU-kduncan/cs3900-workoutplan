@@ -1,18 +1,18 @@
-# MVP \- Analyze the Business Needs
+# MVP - Analyze the Business Needs
 
-* Team Name: Running Application Team
-* Team Members: Chase Ennis, Conor Fanning, Blake Colegrove
+* Team Name: Workout App Team
+* Team Members: Chase Ennis
 * Project Name: Workout Plan Team
 
 ## Problem Statement
 
-> Runners want to be able to have a simple digital tracking application to store and analyze their runs	
+> Runners want to be able to have a simple digital tracking application to store and analyze their runs.	
 
 *** 
 
 ## Vision and Objectives
 
-> To give runners a clean, simple interface to store runs in an organized fashion by date, so that they can go back and view what they have done in past dates. In other words, to give them a bookkeeping interface.
+> To give runners a clean, simple interface to store runs in an organized fashion by date, so that they can go back and view what they have done in past dates. We strive to eliminate the headache of data keeping and help runners focus on running!
 
 > Outline the key objectives of the MVP
 1. Allow Runners to Add Workouts
