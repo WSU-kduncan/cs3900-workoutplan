@@ -58,9 +58,8 @@
     * Backend development, connecting frontend to the database using JAVA
  
 * Outside the scope of this project
-    * The ability to view someone else's runs
     * Commenting on others runs
-    * Creating a social media type of application for runners
+    * Creating a social media type of application for runners. This is not us
     * Tagging someone else if a workout was ran together
 
 
