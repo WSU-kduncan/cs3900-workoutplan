@@ -61,6 +61,7 @@
     * The ability to view someone else's runs
     * Commenting on others runs
     * Creating a social media type of application for runners
+    * Tagging someone else if a workout was ran together
 
 
 ### Performance
