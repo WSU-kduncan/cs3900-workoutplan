@@ -15,3 +15,7 @@ Remember each team member needs to commit 3 questions & an individual interview.
 
 
 ## Blake
+1. Do you enjoy social media?
+    * If so, which apps/platforms do you use?
+2. Do you enjoy talking about running or other workouts?
+3. Would you like to meet more people who enjoy the same types of workouts you do and/or do them with these people?
