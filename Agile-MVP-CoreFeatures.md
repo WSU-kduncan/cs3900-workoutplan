@@ -1,7 +1,7 @@
 # MVP \- Define Core Features
 
 * Team Name: Workout App 
-* Team Members: Chase Ennis 
+* Team Members: Chase Ennis, Blake Colegrove 
 * Project Name: Workout App 
 
 ## Key Features
