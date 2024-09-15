@@ -16,7 +16,7 @@ Interview Question Results: About a month ago, he went on a run. He views time, 
 
 
 ## Blake
-1. Do you enjoy social media?
-    * If so, which apps/platforms do you use?
-2. Do you enjoy talking about running or other workouts?
-3. Would you like to meet more people who enjoy the same types of workouts you do and/or do them with these people?
+1. Have/do you use any data storage/tracking programs/apps for anything?
+    * If so, which apps/programs do you use?
+2. Do you enjoy talking about running or other workouts and the specifics associated with them?
+3. What is something logistically you would add/change with your runs/workouts?
