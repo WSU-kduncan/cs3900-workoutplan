@@ -9,6 +9,7 @@ Remember each team member needs to commit 3 questions & an individual interview.
 3. What is your most memorable run?
     * Follow up is: Do you have data stored about this run somewhere? If so, where?
 
+Interview Question Results: About a month ago, he went on a run. He views time, distance, and pace. He has an application that has a server that saves everthing. He keeps track of his runs on the Under Amrour MapMyRun app. He is in ROTC, and his most memorable run was a memorial run he did in training. They were not allowed to have their phones or any electronics because the run had a deeper purpose.
 
 
 ## Conor
