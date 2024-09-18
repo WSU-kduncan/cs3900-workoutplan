@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS workoutDB;
 
+USE workoutDB;
+
 DROP TABLE IF EXISTS Runner;
 
 -- Create Table
