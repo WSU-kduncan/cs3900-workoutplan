@@ -45,7 +45,7 @@
     * Database: `workoutDB`
     * Password: `password`
 3. Run `docker compose up` from the directory where the docker file is
-    * ![docker compose](images/
+    * ![docker compose](images/compose.png)
   
 
 ## Create Database
