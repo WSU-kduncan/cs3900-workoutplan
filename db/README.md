@@ -42,7 +42,8 @@
     * Click `Database` ... `New Database Connection`
     * Chose `MariaDB` as the database type
     * Database: `workoutDB`
-    * Password:
+    * Password: `password`
+  
 
 ## Create Database
 
