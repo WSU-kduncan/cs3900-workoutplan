@@ -27,6 +27,6 @@
 
 * ![chasescript](images/chasescript.png)
 * Link to file
-   * [chasescript.sql](scripts/chasescript.sql)
+   * [chasescript.sql](SQL-Toolbox/chasescript.sql)
 
 
