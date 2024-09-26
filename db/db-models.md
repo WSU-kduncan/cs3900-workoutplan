@@ -13,9 +13,13 @@
 
 * ![dockercompose](images/dockercompose.png)
 * Link to file
-   * [dockercompose](docker-compose.yml)
+   * [docker-compose.yml](docker-compose.yml)
 
 
 ## Create Database
+
+* ![db](images/db1.png)
+* ![db](images/db2.png)
+* [init.sql script](init.sql)
 
 
