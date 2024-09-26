@@ -20,6 +20,13 @@
 
 * ![db](images/db1.png)
 * ![db](images/db2.png)
-* [init.sql script](init.sql)
+* Link to file:
+   * [init.sql script](init.sql)
+
+## Create Common Query Scripts
+
+* ![chasescript](scripts/chasescript.png)
+* Link to file
+   * [chasescript.sql](scripts/chasescript.sql)
 
 
