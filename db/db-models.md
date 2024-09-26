@@ -13,7 +13,7 @@
 
 * ![dockercompose](images/dockercompose.png)
 * Link to file
-   * [dockercompose](db/dockercompose.yml)
+   * [dockercompose](db/docker-compose.yml)
 
 
 ## Create Database
