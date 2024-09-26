@@ -25,7 +25,7 @@
 
 ## Create Common Query Scripts
 
-* ![chasescript](scripts/chasescript.png)
+* ![chasescript](images/chasescript.png)
 * Link to file
    * [chasescript.sql](scripts/chasescript.sql)
 
