@@ -44,7 +44,8 @@
     * Chose `MariaDB` as the database type
     * Database: `workoutDB`
     * Password: `password`
-
+3. Run `docker compose up` from the directory where the docker file is
+    * ![docker compose](images/
   
 
 ## Create Database
