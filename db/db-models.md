@@ -11,9 +11,9 @@
 
 ## Docker Compose File
 
-* ![dockercompose](models/docker-compose.yml)
+* ![dockercompose](images/dockercompose.png)
 * Link to file
-   * [dockercompose](dockercompose.yml)
+   * [dockercompose](db/dockercompose.yml)
 
 
 ## Create Database
