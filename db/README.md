@@ -38,11 +38,13 @@
    * [docker-compose.yml](docker-compose.yml)
 
 ## Start Docker
-1. Open `DBeaver`
+1. Make sure Docker Desktop is up and running
+2. Open `DBeaver`
     * Click `Database` ... `New Database Connection`
     * Chose `MariaDB` as the database type
     * Database: `workoutDB`
     * Password: `password`
+
   
 
 ## Create Database
