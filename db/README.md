@@ -13,7 +13,7 @@
 * ![db](images/db1.png)
 * ![db](images/db2.png)
 * Link to file:
-   * [init.sql script](init.sql)
+   * [init_workoutDB.sql script](init_workoutDB.sql)
 
 ## Create Common Query Scripts
 
