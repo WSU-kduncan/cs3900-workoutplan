@@ -3,7 +3,7 @@
 
 ## Docker Compose File
 
-* ![dockercompose](images/dockercompose.png)
+* ![dockercompose](images/dockercompose2.png)
 * Link to file
    * [docker-compose.yml](docker-compose.yml)
 
