@@ -23,7 +23,6 @@
    * Has option to Delete a Run
 
 2. Create Workout Wireframe (Chase)
-   * ![create](images/createp1.png)
    * This page has the selection menu for the type of run
    * ![create](images/createp2.png)
    * This page has the details for the run
