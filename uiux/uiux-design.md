@@ -10,7 +10,7 @@
   * The user will select the type of workout they completed
   * Then, they will click the `Add Evaluation` button
   * They will fill in the details on the page such as time, distance, etc.
-  * They also have an option to go `Back`
+  * They also have an option to go `Back` (it is important not to box the user in)
   * Then, they click `Finish` and it is created
 
 ### Wireframes
