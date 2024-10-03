@@ -13,7 +13,6 @@
   * They also have an option to go `Back`
   * Then, they click `Finish` and it is created
 
-
 ### Wireframes
 
 1. Home Page Wireframe (Chase)
@@ -30,3 +29,7 @@
    * This page has the details for the run
    * Once you click `Create`, the workout is added and you go back to the homescreen
    * ![create](images/createp3.png)
+  
+3. Search Wireframe
+
+4. Update Wireframe
