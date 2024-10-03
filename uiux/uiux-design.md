@@ -24,7 +24,7 @@
 
 2. Create Workout Wireframe (Chase)
    * This page has the selection menu for the type of run
-   * ![create](images/createp1.png)
+   * ![create](images/createp2.png)
    * This page has the details for the run
    * Once you click `Create`, the workout is added and you go back to the homescreen
    * ![create](images/createp3.png)
