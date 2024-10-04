@@ -13,6 +13,10 @@
   * They also have an option to go `Back` (it is important not to box the user in)
   * Then, they click `Finish` and it is created
 
+2. Update (Blake)
+  * ![update flow](images/workoutUpdateFlow.png)
+  * The home page will have an `Edit` button
+
 ### Wireframes
 
 1. Home Page Wireframe (Chase)
