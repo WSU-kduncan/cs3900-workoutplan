@@ -14,8 +14,12 @@
   * Then, they click `Finish` and it is created
 
 2. Update (Blake)
-  * ![update flow](images/workoutUpdateFlow.png)
+  * ![update flow](images/updateFlow2.png)
   * The home page will have an `Edit` button
+  * The user can select a workout they have completed or back
+  * The user can then select any field or back
+  * Then edit the selected field
+  * Finally hit update to save changes, back, or select another field to edit  
 
 ### Wireframes
 
@@ -36,4 +40,7 @@
   
 3. Search Wireframe
 
-4. Update Wireframe
+4. Update Wireframe (Blake)
+   * The first screen has the selection menu for the completed workouts the user has.
+   * The second screen has all the fields associated with the workout that the user can edit.
+   * ![update](images/update2.png)
