@@ -4,6 +4,8 @@
 
 ### User Flows
 
+(Please note we did not really understand what it meant by a flow for home menu. The user will open the app, and they will be on the home screen with a set of actions they can do)
+
 1. Create (Chase)
   * ![create flow](images/createflow.png)
   * The home page will have a `Create` button
