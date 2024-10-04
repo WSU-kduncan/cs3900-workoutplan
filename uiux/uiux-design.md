@@ -24,7 +24,7 @@
 ### Wireframes
 
 1. Home Page Wireframe (Chase)
-   * ![home page](images/homewireframe.png)
+   * ![home page](images/homeframe.png)
    * Main home menu
    * Has option to Create a Run
    * Has option to Search for a Run
