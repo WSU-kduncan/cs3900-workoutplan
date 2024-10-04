@@ -16,10 +16,10 @@
 2. Update (Blake)
   * ![update flow](images/updateFlow2.png)
   * The home page will have an `Edit` button
-  * The user can select a workout they have completed or back
-  * The user can then select any field or back
+  * The user can select a workout they have completed or `Back`
+  * The user can then select any field or `Back`
   * Then edit the selected field
-  * Finally hit update to save changes, back, or select another field to edit  
+  * Finally hit `Update` to save changes, `Back`, or select another field to edit  
 
 ### Wireframes
 
