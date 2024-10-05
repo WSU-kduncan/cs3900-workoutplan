@@ -23,6 +23,13 @@
   * Then edit the selected field
   * Finally hit `Update` to save changes, `Back`, or select another field to edit  
 
+3. Search (Connor)
+    - ![Search flow](images/searchflow.png)
+    - The home page will have a `Search` button to search for previous workouts.
+    - The user will be shown options to filter search results by workout type, time of day, city, distance, average heartrate, rating, and date.
+    - The user can select `Search` to search for their previous workouts that fit the specified filters, or `Back` to return to the home page.
+    - While looking at the search results, the user can press `Update` to update the selected workout, or `Do Again` to move to the `Create` menu, with information of the selected workout already filled in.
+
 ### Wireframes
 
 1. Home Page Wireframe (Chase)
@@ -42,6 +49,13 @@
   
 3. Search Wireframe
 
+![Search, first screen](images/search1.png)
+
+  - The first screen contains the search filters, a `Back` button to return to the home page, and a `Search` button to search and display the filtered results, moving the user to the second screen.
+
+![Search, second screen](images/search2.png)
+
+  - The second screen contains the search results (each of which have an `Update` button to update the selected workout, and a `Do Again` button to move to the `Create` menu with information of the selected workout already filled in), and a `Back` button to return to the first screen.
 4. Update Wireframe (Blake)
    * The first screen has the selection menu for the completed workouts the user has.
    * The second screen has all the fields associated with the workout that the user can edit.
