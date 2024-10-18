@@ -1,46 +1,36 @@
 openapi: 3.0.3
 info:
-  title: work-order-pro-service Copy
+  title: workout-app
   version: 1.0.0
   contact: {}
 servers:
-  - url: 'http://localhost:8080/work-order-pro-service'
+  - url: 'http://localhost:8080/workout-app
 paths:
   /customers:
     get:
       tags:
-        - Customers
-      summary: Get Customers
-      description: Get Customers
-      operationId: getCustomers
+        - Runners
+      summary: Get Runner
+      description: Get Runner
+      operationId: getRunners
       parameters:
         - name: search
           in: query
           schema:
             type: string
           description: >-
-            It's an optional and allow to search by customer firstName,
-            lastName, city, state, WorkOrder status
-        - name: page
+            It's an optional and allow to search by runner firstName,
+            lastName
+        - name: firstName
           in: query
           schema:
             type: string
-          description: It's optional (default value is 1)
-        - name: rpp
+          description: It's not optional
+        - name: lastName
           in: query
           schema:
             type: string
-          description: results per page is optional (default value is 10)
-        - name: sortOrder
-          in: query
-          schema:
-            type: string
-          description: sortOrder is an optional (default value is desc)
-        - name: sortField
-          in: query
-          schema:
-            type: string
-          description: sortField is an optional (default value is dateLastUpdated)
+          description: It's not optional
       responses:
         '200':
           description: Success Response
@@ -54,32 +44,20 @@ paths:
                     items:
                       type: object
                       properties:
-                        addressLine1:
-                          type: string
-                        addressLine2:
-                          type: string
-                        city:
-                          type: string
-                        dateAdded:
-                          type: string
-                        dateLastUpdated:
-                          type: string
-                        email:
-                          type: string
+                        runnerID:
+                          type: number
                         firstName:
                           type: string
-                        id:
-                          type: number
                         lastName:
                           type: string
-                        latestWorkOrderStatus:
+                        gender:
                           type: string
-                        phone:
-                          type: string
-                        state:
-                          type: string
-                        zip:
-                          type: string
+                        height:
+                          type: number
+                        age:
+                          type: number
+                        weight:
+                          type: number
                   meta:
                     type: object
                     properties:
@@ -91,34 +69,30 @@ paths:
                         type: number
     post:
       tags:
-        - Customers
-      summary: Add Customer
-      description: Add Customer
-      operationId: addCustomer
+        - Runners
+      summary: Add Runner
+      description: Add Runner
+      operationId: addRunner
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                addressLine1:
-                  type: string
-                addressLine2:
-                  type: string
-                city:
-                  type: string
-                email:
-                  type: string
+                runnerID:
+                  type: number
                 firstName:
                   type: string
                 lastName:
                   type: string
-                phone:
+                gender:
                   type: string
-                state:
-                  type: string
-                zip:
-                  type: string
+                height:
+                  type: number
+                age:
+                  type: number
+                weight:
+                  type: number
       responses:
         '200':
           description: Success Response
@@ -130,32 +104,26 @@ paths:
                   data:
                     type: object
                     properties:
-                      addressLine1:
-                        type: string
-                      addressLine2:
-                        type: string
-                      city:
-                        type: string
-                      email:
-                        type: string
+                      runnerID:
+                        type: number
                       firstName:
                         type: string
-                      id:
-                        type: number
                       lastName:
                         type: string
-                      phoneNumber:
+                      gender:
                         type: string
-                      state:
-                        type: string
-                      zip:
-                        type: string
+                      height:
+                        type: number
+                      age:
+                        type: number
+                      weight:
+                        type: number
                   meta:
                     type: object
                     properties:
                       message:
                         type: string
-  /customers/{id}:
+  /runners/{id}:
     put:
       parameters:
         - name: id
@@ -164,34 +132,28 @@ paths:
           schema:
             type: integer
       tags:
-        - Customers
-      summary: Update Customer
-      description: Update Customer
-      operationId: updateCustomer
+        - Runners
+      summary: Update Runner
+      description: Update Runner
+      operationId: updateRunner
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                addressLine1:
-                  type: string
-                addressLine2:
-                  type: string
-                city:
-                  type: string
-                email:
-                  type: string
                 firstName:
                   type: string
                 lastName:
                   type: string
-                phone:
+                gender:
                   type: string
-                state:
-                  type: string
-                zip:
-                  type: string
+                height:
+                  type: number
+                age:
+                  type: number
+                weight:
+                  type: number
       responses:
         '200':
           description: Success Response
@@ -203,26 +165,20 @@ paths:
                   data:
                     type: object
                     properties:
-                      addressLine1:
-                        type: string
-                      addressLine2:
-                        type: string
-                      city:
-                        type: string
-                      email:
-                        type: string
+                      runnerID:
+                        type: number
                       firstName:
                         type: string
-                      id:
-                        type: number
                       lastName:
                         type: string
-                      phoneNumber:
+                      gender:
                         type: string
-                      state:
-                        type: string
-                      zip:
-                        type: string
+                      height:
+                        type: number
+                      age:
+                        age: number
+                      weight:
+                        type: number
                   meta:
                     type: object
                     properties:
@@ -236,10 +192,10 @@ paths:
           schema:
             type: integer
       tags:
-        - Customers
-      summary: Delete Customer
-      description: Delete Customer
-      operationId: deleteCustomer
+        - Runners
+      summary: Delete Runner
+      description: Delete Runner
+      operationId: deleteRunner
       responses:
         '200':
           description: Success Response
@@ -328,98 +284,27 @@ paths:
                         type: number
                       resultCount:
                         type: number
-    post:
-      tags:
-        - Technicians
-      summary: Add Technician
-      description: Add Technician
-      operationId: addTechnician
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                code:
-                  type: string
-                firstName:
-                  type: string
-                lastName:
-                  type: string
-                type:
-                  type: string
-                workPermits:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      code:
-                        type: string
-      responses:
-        '201':
-          description: Success Response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      code:
-                        type: string
-                      firstName:
-                        type: string
-                      lastName:
-                        type: string
-                      type:
-                        type: string
-                      workPermits:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            code:
-                              type: string
-                            name:
-                              type: string
-                  meta:
-                    type: object
-                    properties:
-                      message:
-                        type: string
-  /technicians/{technicianCode}:
+  /workout/{workoutID}:
     put:
       parameters:
-        - name: technicianCode
+        - name: workoutID
           in: path
           required: true
           schema:
-            type: string
+            type: number
       tags:
-        - Technicians
-      summary: Update Technician
-      description: Update Technician
-      operationId: updateTechnician
+        - Workouts
+      summary: Update Workout
+      description: Update Workout
+      operationId: updateWorkout
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                firstName:
+                workoutType:
                   type: string
-                lastName:
-                  type: string
-                type:
-                  type: string
-                workPermits:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      code:
-                        type: string
       responses:
         '200':
           description: Success Response / Success Response - when remove state
@@ -431,23 +316,8 @@ paths:
                   data:
                     type: object
                     properties:
-                      code:
+                      workoutType:
                         type: string
-                      firstName:
-                        type: string
-                      lastName:
-                        type: string
-                      type:
-                        type: string
-                      workPermits:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            code:
-                              type: string
-                            name:
-                              type: string
                   meta:
                     type: object
                     properties:
@@ -455,16 +325,16 @@ paths:
                         type: string
     delete:
       parameters:
-        - name: technicianCode
+        - name: workoutID
           in: path
           required: true
           schema:
-            type: string
+            type: number
       tags:
-        - Technicians
-      summary: Delete Technician
-      description: Delete Technician
-      operationId: deleteTechnician
+        - Workouts
+      summary: Delete Workout
+      description: Delete Workout
+      operationId: deleteWorkout
       responses:
         '200':
           description: Success Response
@@ -480,19 +350,19 @@ paths:
                     properties:
                       message:
                         type: string
-  /states:
+  /evaluation:
     get:
       tags:
-        - States
-      summary: Get States
-      description: Get States
-      operationId: getStates
+        - Evaluations
+      summary: Get Evaluations
+      description: Get Evaluations
+      operationId: getEvaluations
       parameters:
         - name: search
           in: query
           schema:
             type: string
-          description: It's an optional and allow typeahead search by state code & name
+          description: It's an optional and allow typeahead search by runnerID and workoutID
       responses:
         '200':
           description: Success Response
@@ -515,132 +385,44 @@ paths:
                     properties:
                       message:
                         type: string
-  /products:
-    get:
+post:
       tags:
-        - Products
-      summary: Get Products
-      description: Get Products
-      operationId: getProducts
-      parameters:
-        - name: isActive
-          in: query
-          schema:
-            type: string
-          description: It's optional and used to filter only active products
-      responses:
-        '200':
-          description: Success Response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  data:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        active:
-                          type: boolean
-                        code:
-                          type: string
-                        name:
-                          type: string
-                        typeCode:
-                          type: string
-                        unitCost:
-                          type: number
-                        universalProductCode:
-                          type: string
-                  meta:
-                    type: object
-                    properties:
-                      message:
-                        type: string
-  /workOrderSummaries:
-    get:
-      tags:
-        - WorkOrders
-      summary: Get Summary
-      description: Get Summary
-      operationId: getSummary
-      parameters:
-        - name: customerLastName
-          in: query
-          schema:
-            type: string
-        - name: technicianLastName
-          in: query
-          schema:
-            type: string
-        - name: workOrderStatus
-          in: query
-          schema:
-            type: string
-        - name: page
-          in: query
-          schema:
-            type: string
-        - name: rpp
-          in: query
-          schema:
-            type: string
-        - name: sortOrder
-          in: query
-          schema:
-            type: string
-        - name: sortField
-          in: query
-          schema:
-            type: string
-      responses:
-        '200':
-          description: SuccessResponse
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  data:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        customerFirstName:
-                          type: string
-                        customerLastName:
-                          type: string
-                        dateLastUpdated:
-                          type: string
-                        dateScheduled:
-                          type: string
-                        technicianCode:
-                          type: string
-                        technicianFirstName:
-                          type: string
-                        technicianLastName:
-                          type: string
-                        workOrderNumber:
-                          type: number
-                        workOrderStatus:
-                          type: string
-                  meta:
-                    type: object
-                    properties:
-                      message:
-                        type: string
-                      pageCount:
-                        type: number
-                      resultCount:
-                        type: number
-  /workOrders/{WORK_ORDER_NUMBER}:
-    get:
-      tags:
-        - WorkOrders
-      summary: Get WorkOrder Details
-      description: Get WorkOrder Details
-      operationId: getWorkorderDetails
+        - Evaluations
+      summary: Add Evaluation
+      description: Add Evaluation
+      operationId: addEvaluation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                evaluationID:
+                  type: number
+                runnerID:
+                  type: number
+                workoutID:
+                  type: number
+                evaluationDate:
+                  type: number
+                city:
+                  type: string
+                stateCode:
+                  type: String
+                startTime:
+                  type: number
+                 endTime:
+                  type: number
+                distance:
+                  type: number
+                timeOfDay:
+                  type: String
+                averageHeartRate:
+                  type: number
+                feelScoreRating:
+                  type: number
+                comments:
+                  type: string
       responses:
         '200':
           description: Success Response
@@ -652,174 +434,72 @@ paths:
                   data:
                     type: object
                     properties:
-                      customerId:
+                      evaluationDate:
                         type: number
-                      dateOrdered:
+                      city:
                         type: string
-                      dateTimeCompleted:
-                        type: string
-                      dateTimeLastUpdated:
-                        type: string
-                      dateTimeScheduled:
-                        type: string
-                      lineItems:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            quantity:
-                              type: number
-                            skuCode:
-                              type: string
-                            tax:
-                              type: number
-                            taxable:
-                              type: boolean
-                            unitCost:
-                              type: number
-                            workOrderNumber:
-                              type: number
-                      statusCode:
-                        type: string
-                      technicianCode:
-                        type: string
-                      workOrderNumber:
+                      stateCode:
+                        type: String
+                      startTime:
                         type: number
+                      endTime:
+                        type: number
+                      distance:
+                        type: number
+                      timeOfDay:
+                        type: String
+                      averageHeartRate:
+                        type: number
+                      feelScoreRating:
+                        type: number
+                      comments:
+                        type: string
                   meta:
                     type: object
                     properties:
                       message:
                         type: string
+  /evaluations/{id}:
     put:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
       tags:
-        - WorkOrders
-      summary: Update WorkOrder
-      description: Update WorkOrder
-      operationId: updateWorkorder
+        - Evaluations
+      summary: Update Evaluation
+      description: Update Evaluation
+      operationId: updateEvaluation
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                customerId:
+                evaluationDate:
                   type: number
-                dateOrdered:
+                city:
                   type: string
-                dateTimeCompleted:
-                  type: string
-                lineItems:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      quantity:
-                        type: number
-                      skuCode:
-                        type: string
-                      tax:
-                        type: number
-                      taxable:
-                        type: boolean
-                      unitCost:
-                        type: number
-                statusCode:
-                  type: string
-                technicianCode:
+                stateCode:
+                  type: String
+                startTime:
+                  type: number
+                endTime:
+                  type: number
+                distance:
+                  type: number
+                timeOfDay:
+                  type: String
+                averageHeartRate:
+                  type: number
+                feelScoreRating:
+                  type: number
+                comments:
                   type: string
       responses:
         '200':
-          description: Success Response / Remove Line Item / Add Line Item
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      customerId:
-                        type: number
-                      dateOrdered:
-                        type: string
-                      dateTimeCompleted:
-                        type: string
-                      dateTimeLastUpdated:
-                        type: string
-                      dateTimeScheduled:
-                        nullable: true
-                      lineItems:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            quantity:
-                              type: number
-                            skuCode:
-                              type: string
-                            tax:
-                              type: number
-                            taxable:
-                              type: boolean
-                            unitCost:
-                              type: number
-                            workOrderNumber:
-                              type: number
-                      statusCode:
-                        type: string
-                      technicianCode:
-                        type: string
-                      workOrderNumber:
-                        type: number
-                  meta:
-                    type: object
-                    properties:
-                      message:
-                        type: string
-    parameters:
-      - name: WORK_ORDER_NUMBER
-        in: path
-        required: true
-        schema:
-          type: string
-  /workOrders:
-    post:
-      tags:
-        - WorkOrders
-      summary: Add WorkOrder
-      description: Add WorkOrder
-      operationId: addWorkorder
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                customerId:
-                  type: number
-                dateOrdered:
-                  type: string
-                lineItems:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      quantity:
-                        type: number
-                      skuCode:
-                        type: string
-                      tax:
-                        type: number
-                      taxable:
-                        type: boolean
-                      unitCost:
-                        type: number
-                statusCode:
-                  type: string
-                technicianCode:
-                  type: string
-      responses:
-        '201':
           description: Success Response
           content:
             application/json:
@@ -829,47 +509,59 @@ paths:
                   data:
                     type: object
                     properties:
-                      customerId:
+                      evaluationDate:
                         type: number
-                      dateOrdered:
+                      city:
                         type: string
-                      dateTimeCompleted:
-                        nullable: true
-                      dateTimeLastUpdated:
-                        nullable: true
-                      dateTimeScheduled:
-                        nullable: true
-                      lineItems:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            quantity:
-                              type: number
-                            skuCode:
-                              type: string
-                            tax:
-                              type: number
-                            taxable:
-                              type: boolean
-                            unitCost:
-                              type: number
-                            workOrderNumber:
-                              type: number
-                      statusCode:
-                        type: string
-                      technicianCode:
-                        type: string
-                      workOrderNumber:
+                      stateCode:
+                        type: String
+                      startTime:
                         type: number
+                      endTime:
+                        type: number
+                      distance:
+                        type: number
+                      timeOfDay:
+                        type: String
+                      averageHeartRate:
+                        type: number
+                      feelScoreRating:
+                        type: number
+                      comments:
+                        type: string
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+    delete:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      tags:
+        - Runners
+      summary: Delete Evaluation
+      description: Delete Evaluation
+      operationId: deleteEvaluation
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    nullable: true
                   meta:
                     type: object
                     properties:
                       message:
                         type: string
 tags:
-  - name: Customers
-  - name: Technicians
-  - name: States
-  - name: Products
-  - name: WorkOrders
+  - name: Runners
+  - name: Workouts
+  - name: Evaluations
