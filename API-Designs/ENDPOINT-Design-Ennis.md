@@ -64,7 +64,7 @@
             runner.setId(id);
             return convertToDTO(runnerRepository.save(runner));
         } catch (Exception e) {
-            log.error("Failed to update runner, customerId:{}. Exception:{}", id, e);
+            log.error("Failed to update runner, RunnerId:{}. Exception:{}", id, e);
             throw new DatabaseErrorException("Failed to update runner", e);
         }
     }
