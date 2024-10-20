@@ -1,0 +1,523 @@
+openapi: 3.0.3
+info:
+  title: workout-app
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: 'http://localhost:8080/workout-app'
+paths:
+  /runners:
+    get:
+      tags:
+        - Runners
+      summary: Get Runners
+      description: Get Runners
+      operationId: getRunners
+      parameters:
+        - name: search
+          in: query
+          schema:
+            type: string
+          description: >-
+            It's optional and user can search by runnerID, firstName + lastName, or evaluationID
+        - name: page
+          in: query
+          schema:
+            type: string
+          description: It's optional (default value is 1)
+        - name: rpp
+          in: query
+          schema:
+            type: string
+          description: results per page is optional (default value is 10)
+        - name: sortOrder
+          in: query
+          schema:
+            type: string
+          description: sortOrder is optional (default value is runnerID)
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        runnerID:
+                          type: number
+                        firstName:
+                          type: string
+                        lastName:
+                          type: string
+                        gender:
+                          type: string
+                        height:
+                          type: number
+                        age:
+                          type: number
+                        weight:
+                          type: number
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                      pageCount:
+                        type: number
+                      resultCount:
+                        type: number
+    post:
+      tags:
+        - Runners
+      summary: Add Runner
+      description: Add Runner
+      operationId: addRunner
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                runnerID:
+                  type: number
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                gender:
+                  type: string
+                height:
+                  type: number
+                age:
+                  type: number
+                weight:
+                  type: number
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      runnerID:
+                        type: number
+                      firstName:
+                        type: string
+                      lastName:
+                        type: string
+                      gender:
+                        type: string
+                      height:
+                        type: number
+                      age:
+                        type: number
+                      weight:
+                        type: number
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+  /runners/{id}:
+    put:
+      parameters:
+        - name: runnerID
+          in: path
+          required: true
+          schema:
+            type: integer
+      tags:
+        - Runners
+      summary: Update Runner
+      description: Update Runner
+      operationId: updateRunner
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                runnerID:
+                  type: number
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                gender:
+                  type: string
+                height:
+                  type: number
+                age:
+                  type: number
+                weight:
+                  type: number
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      runnerID:
+                        type: number
+                      firstName:
+                        type: string
+                      lastName:
+                        type: string
+                      gender:
+                        type: string
+                      height:
+                        type: number
+                      age:
+                        type: number
+                      weight:
+                        type: number
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+    delete:
+      parameters:
+        - name: runnerID
+          in: path
+          required: true
+          schema:
+            type: integer
+      tags:
+        - Runners
+      summary: Delete Runner
+      description: Delete Runner
+      operationId: deleteRunner
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    nullable: true
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+  /workouts:
+    get:
+      tags:
+        - Workouts
+      summary: Get Workouts
+      description: Get Workouts
+      operationId: Workouts
+      parameters:
+        - name: search
+          in: query
+          schema:
+            type: string
+          description: >-
+            It's optional and can search by Runner (Runner.runnerID, Runner.firstName+Runner.lastName) or workoutID or type
+        - name: page
+          in: query
+          schema:
+            type: string
+          description: It's optional (default value is 1)
+        - name: rpp
+          in: query
+          schema:
+            type: string
+          description: results per page is optional (default value is 10)
+        - name: sortOrder
+          in: query
+          schema:
+            type: string
+          description: sortOrder is an optional (default value is workoutID)
+        - name: sortField
+          in: query
+          schema:
+            type: string
+          description: sortField is an optional (default value is type)
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        workoutID:
+                          type: number
+                        type:
+                          type: number
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                      pageCount:
+                        type: number
+                      resultCount:
+                        type: number
+    post:
+      tags:
+        - Workout
+      summary: Add Workout
+      description: Add Workout
+      operationId: addWorkout
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                workoutID:
+                  type: number
+                type:
+                  type: number
+      responses:
+        '201':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  workoutID:
+                    type: number
+                  type:
+                    type: number
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+  /workouts/{workoutID}:
+    put:
+      parameters:
+        - name: workoutID
+          in: path
+          required: true
+          schema:
+            type: string
+      tags:
+        - Workouts
+      summary: Update Workout
+      description: Update Workout
+      operationId: updateWorkout
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                workoutID:
+                  type: number
+                type:
+                  type: number
+      responses:
+        '200':
+          description: Success Response 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      workoutID:
+                        type: number
+                      type:
+                        type: number
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+    delete:
+      parameters:
+        - name: workoutID
+          in: path
+          required: true
+          schema:
+            type: string
+      tags:
+        - Workouts
+      summary: Delete Workout
+      description: Delete Workout
+      operationId: deleteWorkout
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    nullable: true
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+  /evaluations:
+    get:
+      tags:
+        - Evaluations
+      summary: Get Evaluations
+      description: Get Evaluations
+      operationId: getEvaluations
+      parameters:
+        - name: search
+          in: query
+          schema:
+            type: string
+          description: It's optional can search by Runner (Runner.runnerID, Runner.firstName+Runner.lastName), Workout.workoutID, 
+                       evaluationDate, city, stateCode, timeOfDay, distance, avgHeartRate, or evaluationID
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        evaluationID:
+                          type: number
+                        evaluationDate:
+                          type: date
+                        city:
+                          type: string
+                        stateCode:
+                          type: string
+                        timeOfDay:
+                          type: string
+                        distance:
+                          type: number
+                        avgHeartRate:
+                          type: number
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+  /evaluations/{evaluationID}:
+    put:
+      parameters:
+        - name: evaluationID
+          in: path
+          required: true
+          schema:
+            type: string
+      tags:
+        - Evaluations
+      summary: Update Evaluations
+      description: Update Evaluations
+      operationId: updateEvaluations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                evaluationID:
+                  type: number
+                evaluationDate:
+                  type: date
+                city:
+                  type: string
+                stateCode:
+                  type: string
+                timeOfDay:
+                  type: string
+                distance:
+                  type: number
+                avgHeartRate:
+                  type: number
+      responses:
+        '200':
+          description: Success Response 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      evaluationID:
+                        type: number
+                      evaluationDate:
+                        type: date
+                      city:
+                        type: string
+                      stateCode:
+                        type: string
+                      timeOfDay:
+                        type: string
+                      distance:
+                        type: number
+                      avgHeartRate:
+                        type: number
+
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+    delete:
+      parameters:
+        - name: evaluationID
+          in: path
+          required: true
+          schema:
+            type: string
+      tags:
+        - Evaluations
+      summary: Delete Evaluation
+      description: Delete Evaluation
+      operationId: deleteEvaluation
+      responses:
+        '200':
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    nullable: true
+                  meta:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+tags:
+  - name: Runners
+  - name: Workouts
+  - name: Evaluations
