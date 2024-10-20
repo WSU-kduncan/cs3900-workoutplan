@@ -45,7 +45,6 @@ public RunnerDTO save(RunnerDTO runnerDTO) {
             return new ResponseEntity<>(RunnerResponseDTO.builder()
                     .meta(Map.of(MESSAGE, "Runner updated successfully."))
                     .data(updatedRunner)
-
                     .build(), HttpStatus.OK);
         } catch (InvalidRequestException e) {
             //HTTP status 400
