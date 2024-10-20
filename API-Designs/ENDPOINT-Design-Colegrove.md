@@ -11,12 +11,14 @@
 * This handles the creation and saving of a Runner. It will send an HTTP error message if an exception occurs if the user tries to create an account (a `Runner`) and a `Runner` already exists with the same `runnerID`. Exceptions would be handled by the DTO.
 * The user will need to provide the Runner's `firstName`, `lastName`, `gender`, `height`, `age`, and `weight`. The `runnerID` will be generated on the backend.
 * Example)
-* `@PostMapping
+* `
+@PostMapping
   public ResponseEntity<RunnerResponseDTO> createRunner(@RequestBody @Valid RunnerDTO runnerDTO) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Runner created successfully"))
                 .data(runnerService.save(runnerrDTO)).build(), HttpStatus.OK);
     } `
-* `      public RunnerDTO save(RunnerDTO runnerDTO) {
+* `
+public RunnerDTO save(RunnerDTO runnerDTO) {
         if (runnerRepository.existsById(runnerDTO.getId())) {
             throw new InvalidRequestException("Runner already exist with this id.");
         }
@@ -33,7 +35,8 @@
 * An exception would occur if the `Runner` does not exist or if necessary fields are left NULL. Necessary fields include any that have been altered or deleted. 
 * Would occur in an `update()` method.
 * Example)
-* `@PutMapping("/{runnerId}")
+* `
+@PutMapping("/{runnerId}")
     public ResponseEntity<RunnerResponseDTO> updateRunner(@PathVariable Integer runnerId,
                                                              @RequestBody @Valid RunnerDTO runnerDTO) {
           try {
@@ -60,7 +63,8 @@
 * @DELETEMapping would occur in the `RunnerController` class.
 * It would handle deleting a `Runner` based on the provided `runnerID`.
 * Example)
-* `     public void delete(Integer runnerID){
+* `
+public void delete(Integer runnerID){
         if(!runnerRepository.existsById(runnerID)){
             throw new InvalidRequestException("Invalid runnerID");
         }
