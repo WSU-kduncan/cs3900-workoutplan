@@ -30,8 +30,8 @@
 * Something like this:
   ```
       public RunnerDTO save(RunnerDTO runnerDTO) {
-        if (runnerRepository.existsById(runnerDTO.getId())) {
-            throw new InvalidRequestException("Runner already exist with this id.");
+        if (runnerRepository.existsByEmail(runnerDTO.getEmail())) {
+            throw new InvalidRequestException("Runner already exist with this email.");
         }
         try {
             return convertToDTO(runnerRepository.save(convertToEntity(runnerDTO)));
