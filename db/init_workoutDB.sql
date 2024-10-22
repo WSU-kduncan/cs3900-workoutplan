@@ -23,23 +23,12 @@ DROP TABLE IF EXISTS Workout;
 
 CREATE TABLE Workout (
         workoutID INTEGER(10) NOT NULL AUTO_INCREMENT COMMENT 'Workout ID',
-        workoutType VARCHAR(30) NOT NULL COMMENT 'type',
+        workoutType TINYINT(2) NOT NULL COMMENT 'type',
         PRIMARY KEY (workoutID)
 )
+
 COMMENT 'Workout'
 ;
-
--- Insert Types of Runs
-INSERT INTO Workout (workoutType) VALUES ('Long Run');
-INSERT INTO Workout (workoutType) VALUES ('Easy Run');
-INSERT INTO Workout (workoutType) VALUES ('Hard Run');
-INSERT INTO Workout (workoutType) VALUES ('Tempo');
-INSERT INTO Workout (workoutType) VALUES ('Fartlek');
-INSERT INTO Workout (workoutType) VALUES ('Race');
-INSERT INTO Workout (workoutType) VALUES ('Strides');
-INSERT INTO Workout (workoutType) VALUES ('Progression Run');
-INSERT INTO Workout (workoutType) VALUES ('Heartrate Run');
-INSERT INTO Workout (workoutType) VALUES ('Speed Work');
 
 DROP TABLE IF EXISTS Evaluation;
 
