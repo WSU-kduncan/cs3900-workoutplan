@@ -20,7 +20,7 @@
 * Something like this:
   ```
   @PostMapping
-  public ResponseEntity<RunnerResponseDTO> createRunner(@RequestBody @Valid RunnerDTO runnerDTO) {
+  public ResponseEntity<ServiceResponseDTO> createRunner(@RequestBody @Valid RunnerDTO runnerDTO) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Runner created successfully"))
                 .data(runnerService.save(runnerrDTO)).build(), HttpStatus.OK);
     }
