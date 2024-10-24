@@ -6,7 +6,8 @@ services:
     container_name: workoutDB
     restart: always
     volumes:
-      - ./init_workoutDB.sql:/docker-entrypoint-initdb.d/init_workoutDB.sql
+      #- ./init_workoutDB.sql:/docker-entrypoint-initdb.d/init_workoutDB.sql
+      - ./init_workoutDB.sql:/docker-entrypoint-initdb.d/init.sql
       # - ./data:/var/lib/mysql                   # Mount a volume for data persistence (optional)
     environment:
       - MYSQL_ROOT_PASSWORD=password

@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS Runner;
 -- Create Table
 CREATE TABLE Runner (
          runnerID INTEGER(10) AUTO_INCREMENT NOT NULL COMMENT 'Runner ID',
+	 email VARCHAR(40) NOT NULL COMMENT 'Email',
          firstName VARCHAR(50) NOT NULL COMMENT 'First Name',
          lastName VARCHAR(50) NOT NULL COMMENT 'Last Name',
          gender CHAR(10) NOT NULL COMMENT 'Gender',
