@@ -20,7 +20,7 @@
 * Something like this:
   ```
   @PostMapping
-  public ResponseEntity<RunnerResponseDTO> createRunner(@RequestBody @Valid RunnerDTO runnerDTO) {
+  public ResponseEntity<ServiceResponseDTO> createRunner(@RequestBody @Valid RunnerDTO runnerDTO) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Runner created successfully"))
                 .data(runnerService.save(runnerrDTO)).build(), HttpStatus.OK);
     }
@@ -30,8 +30,8 @@
 * Something like this:
   ```
       public RunnerDTO save(RunnerDTO runnerDTO) {
-        if (runnerRepository.existsById(runnerDTO.getId())) {
-            throw new InvalidRequestException("Runner already exist with this id.");
+        if (runnerRepository.existsByEmail(runnerDTO.getEmail())) {
+            throw new InvalidRequestException("Runner already exist with this email.");
         }
         try {
             return convertToDTO(runnerRepository.save(convertToEntity(runnerDTO)));
