@@ -4,7 +4,19 @@
 
 ### `GET`
 * @GETMapping would occur in the `RunnerController` class
-* The user would login which would attempt to request a Runner's profile based on a database search of the `runnerID`. This will pull up all relevant Runner data via a `get()` and will include `runnerID`, name (`firstName` + ' ' + `lastName`), `gender`, `height`, `weight`, and `age`.
+* The user would login which would attempt to request a Runner's profile based on a database search of the `runnerID`. The following example would be if a `Runner` is trying to receive a list of all their evaluations.
+* Example)
+* `@GetMapping
+    public ResponseEntity<ServiceResponseDTO> getAllEvaluations(@RequestParam(required = false) String search,
+                                                                              @RequestParam(required = false, defaultValue = "1") Integer page,
+                                                                              @RequestParam(required = false, defaultValue = "10") Integer rpp,
+                                                                              @RequestParam(required = false, defaultValue = "technicianCode") String sortField,
+                                                                              @RequestParam(required = false, defaultValue = Constants.DESC) String sortOrder) {
+        Page<EvaluationDTO> evaluationDTOPage = evaluationService.get(search, sortField, sortOrder, page, rpp);
+        return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Successfully retrieved evaluations.", PAGE_COUNT,
+                        evaluationDTOPage.getTotalPages(), RESULT_COUNT, evaluationDTOPage.getTotalElements()))
+                .data(evaluationsDTOPage.getContent()).build(), HttpStatus.OK);
+    } `
 
 ### `POST`
 * @POSTMapping would occur in the `RunnerController` class. 

@@ -6,7 +6,15 @@
 * ![dockercompose](images/dockercompose2.png)
 * Link to file
    * [docker-compose.yml](docker-compose.yml)
+### To start container:
+* Using this folder as the working directory, `docker compose up` with the shell of your choice.
 
+## Connecting to the Database:
+* Using DBeaver, create a new Connection. (Use the MariaDB preset)
+   * Database: `workoutDB`
+   * Username: `root`
+   * Password: `password`
+   * Port: `3306`
 
 ## Create Database
 
