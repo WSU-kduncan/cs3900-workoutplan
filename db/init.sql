@@ -12,7 +12,7 @@ CREATE TABLE Runner (
          lastName VARCHAR(50) NOT NULL COMMENT 'Last Name',
          gender CHAR(10) NOT NULL COMMENT 'Gender',
          height DEC(5,2) NOT NULL COMMENT 'Height',
-         age TINYINT(3) NOT NULL COMMENT 'Age',
+         age INTEGER(3) NOT NULL COMMENT 'Age',
          weight DEC(5,1) NOT NULL COMMENT 'Weight',
          PRIMARY KEY (runnerID)
 )

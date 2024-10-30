@@ -5,7 +5,7 @@ USE workoutDB;
 DROP TABLE IF EXISTS runner;
 
 -- Create Table
-<<<<<<< HEAD
+
 CREATE TABLE Runner (
          runnerID INTEGER(10) AUTO_INCREMENT NOT NULL COMMENT 'Runner ID',
 	 email VARCHAR(40) NOT NULL COMMENT 'Email',
@@ -13,20 +13,9 @@ CREATE TABLE Runner (
          lastName VARCHAR(50) NOT NULL COMMENT 'Last Name',
          gender CHAR(10) NOT NULL COMMENT 'Gender',
          height DEC(5,2) NOT NULL COMMENT 'Height',
-         age TINYINT(3) NOT NULL COMMENT 'Age',
+         age INTEGER(3) NOT NULL COMMENT 'Age',
          weight DEC(5,1) NOT NULL COMMENT 'Weight',
          PRIMARY KEY (runnerID)
-=======
-CREATE TABLE runner (
-         runner_id INTEGER(10) AUTO_INCREMENT NOT NULL COMMENT 'Runner ID'
-            ,PRIMARY KEY (runner_id)
-         ,first_name VARCHAR(50) NOT NULL COMMENT 'First Name'
-         ,last_name VARCHAR(50) NOT NULL COMMENT 'Last Name'
-         ,gender CHAR(10) NOT NULL COMMENT 'Gender'
-         ,height DEC(5,2) NOT NULL COMMENT 'Height'
-         ,age TINYINT(3) NOT NULL COMMENT 'Age'
-         ,weight DEC(5,1) NOT NULL COMMENT 'Weight'
->>>>>>> 79e4ab118c33e9f5f226afd71eae992784d67eeb
 )
 COMMENT 'Runner'
 ;
