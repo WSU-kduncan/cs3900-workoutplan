@@ -12,11 +12,11 @@ import org.springframework.data.jpa.repository.Query;
 public interface WorkoutRepository extends JpaRepository<Workout, Integer> {
 
     @Query(nativeQuery = true, value = 
-        "SELECT e.workout_id AS workoutId"
-            +", e.runner_id as runnerID"
-            +", e.evaluation_id as evaluationId"
-            +", e.type as type"
-        +" FROM workout e"
+        "SELECT w.workout_id AS workoutId"
+            +", w.runner_id AS runnerID"
+            +", w.evaluation_id AS evaluationId"
+            +", w.type AS type"
+        +" FROM workout w"
         +" WHERE (:search IS NULL"
             +" OR (e.workout_id LIKE %:search%"
             +" OR e.runner_id LIKE %:search%"
