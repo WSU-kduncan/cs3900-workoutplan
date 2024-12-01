@@ -1,0 +1,101 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+  /* Heading Styles */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+  /* Runner List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  /* Button Styling */
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+  /* Specific Button Styles */
+button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+button[type="submit"]:disabled {
+    background-color: #a5d6a7;
+}
+
+button:not([type="submit"]) {
+    background-color: #2196f3;
+    color: #fff;
+    margin-left: 5px;
+}
+
+button:not([type="submit"]):last-of-type {
+    background-color: #f44336;
+}
+
+  /* Form Styling */
+form {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: calc(33.3% - 10px);
+    padding: 8px;
+    margin: 5px 5px 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #2196f3;
+    outline: none;
+}
+

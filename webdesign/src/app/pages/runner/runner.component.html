@@ -1,0 +1,53 @@
+<div class="runner-container">
+    <h1>Runner Management</h1>
+
+    <h2>Runner List</h2>
+    <ul>
+      <li *ngFor="let runner of runners">
+        {{ runner.name }} - {{ runner.email }}
+        <button (click)="selectRunner(runner)">Edit</button>
+        <button (click)="deleteRunner(runner.runner_id)">Delete</button>
+      </li>
+    </ul>
+  
+    <h2>{{ selectedRunner ? 'Edit Runner' : 'Add New Runner' }}</h2>
+    <form [formGroup]="runnerForm" (ngSubmit)="selectedRunner ? updateRunner() : addRunner()">
+      <input
+        type="number"
+        formControlName="id"
+        placeholder="Id"
+      />
+      <div *ngIf="runner_id?.invalid && (runner_id?.dirty || runner_id?.touched)">
+        <small *ngIf="runner_id?.errors?.['required']">Id is required.</small>
+        <small *ngIf="runner_id?.errors?.['min']">Id must be greater than 0.</small>
+      </div>
+  
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Name"
+      />
+      <div *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+        <small *ngIf="name?.errors?.['required']">Name is required.</small>
+      </div>
+  
+      <input
+        type="text"
+        formControlName="email"
+        placeholder="Email"
+      />
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+        <small *ngIf="email?.errors?.['required']">Email is required.</small>
+        <small *ngIf="email?.errors?.['email']">Invalid email format.</small>
+      </div>
+  
+      <button type="submit" [disabled]="runnerForm.invalid">
+        {{ selectedRunner ? 'Update' : 'Add' }} Runner
+      </button>
+    </form>
+  
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="spinner">Loading...</div>
+  </div>
+
+  
