@@ -37,7 +37,7 @@ export class EvaluationComponent implements OnInit {
 
   feel_score_ratings: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     // Retrieve parameters from the route
@@ -63,7 +63,7 @@ export class EvaluationComponent implements OnInit {
       comments: this.comments,
     };
     console.log('Evaluation Submitted:', evaluation);
-    //this.router.navigate(['/']);
+    this.router.navigate(['/']);
   
   }
 }
