@@ -1,0 +1,17 @@
+<div class="saved-workout-container">
+    <h1>Workout Management</h1>
+
+    <h2>Workout List</h2>
+    <ul>
+      <li *ngFor="let workout of workouts">
+        {{ workout.workout_type }} - {{ workout.workout_id }}
+        <button (click)="selectWorkout(workout)">Edit</button>
+        <button (click)="deleteWorkout(workout.workout_id)">Delete</button>
+      </li>
+    </ul>
+  
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="spinner">Loading...</div>
+</div>
+
+  
