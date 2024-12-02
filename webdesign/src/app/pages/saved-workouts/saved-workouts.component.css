@@ -1,21 +1,11 @@
-/* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-
   /* Heading Styles */
 h1 {
-    color: #333;
     text-align: center;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: #555;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #d7e0d9;
     padding-bottom: 5px;
 }
 
@@ -26,8 +16,9 @@ ul {
 }
 
 li {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #313199;
+    border: 2px solid #258cb8;
+    color: #d7e0d9;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
@@ -35,7 +26,10 @@ li {
     justify-content: space-between;
     align-items: center;
 }
-
+li:hover{
+    background-color: #543fe0;
+    transition: background-color 0.3s ease;
+}
   /* Button Styling */
 button {
     padding: 5px 10px;
@@ -45,19 +39,16 @@ button {
     font-size: 14px;
 }
 
-button:hover {
-    opacity: 0.8;
-}
 
 button:disabled {
-    background-color: #ccc;
+    background-color: #d7e0d9;
     cursor: not-allowed;
 }
 
   /* Specific Button Styles */
 button[type="submit"] {
     background-color: #4caf50;
-    color: #fff;
+    color: #fcfff2;
 }
 
 button[type="submit"]:disabled {
@@ -65,20 +56,32 @@ button[type="submit"]:disabled {
 }
 
 button:not([type="submit"]) {
-    background-color: #2196f3;
-    color: #fff;
+    background-color: #b88c33;
+    color: #d7e0d9;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+button:not([type="submit"]):hover {
+    background-color: #ebdf42;
+    color: #101114;
     margin-left: 5px;
 }
 
 button:not([type="submit"]):last-of-type {
-    background-color: #f44336;
+    background-color: #991f2f;
+    color: #d7e0d9;
 }
 
+button:not([type="submit"]):last-of-type:hover {
+    background-color: #e53737;
+    color: #d7e0d9;
+    transition: background-color 0.3s ease;
+}
   /* Form Styling */
 form {
-    background-color: #fff;
+    background-color: #fcfff2;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #d7e0d9;
     border-radius: 5px;
     margin-top: 15px;
 }
