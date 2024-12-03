@@ -16,29 +16,34 @@ h2 {
     padding-bottom: 5px;
 }
 
-  /* Runner List Styling */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+
+
+
 
 li {
-    background-color: #313199;
-    border: 2px solid #258cb8;
-    color: #d7e0d9;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #313199;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+    border: #258cb8 3px solid;
+    width: 95%;
+    color: #d7e0d9;
 }
-li:hover{
+li:hover {
     background-color: #543fe0;
+    transform: scale(1.02);
 }
 
   /* Button Styling */
+.buttons {
+    display: flex;
+    gap: 10px;  
+}
 button {
     padding: 5px 10px;
     border: none;
@@ -66,27 +71,39 @@ button[type="submit"]:disabled {
     background-color: #1d522b;
 }
 
-button:not([type="submit"]) {
-    background-color: #b88c33;
-    color: #d7e0d9;
-    margin-left: 5px;
-    transition: background-color 0.3s ease;
-}
-button:not([type="submit"]):hover {
-    background-color: #ebdf42;
-    color: #101114;
-    margin-left: 5px;
-}
-
-button:not([type="submit"]):last-of-type {
-    background-color: #991f2f;
-    color: #d7e0d9;
+button.edit-button {
+    background-color: #b88c33 !important; 
+    color: #d7e0d9 !important;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:not([type="submit"]):last-of-type:hover {
-    background-color: #e53737;
-    color: #d7e0d9;
-    transition: background-color 0.3s ease;
+button.edit-button:hover {
+    background-color: #ebdf42 !important; 
+    color: #101114 !important;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+button.delete-button {
+    background-color: #991f2f !important; 
+    color: white !important;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.delete-button:hover {
+    background-color: #e53737 !important; 
+    transform: scale(1.05);
 }
 
   /* Form Styling */

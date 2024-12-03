@@ -5,8 +5,10 @@
     <ul>
       <li *ngFor="let workout of workouts">
         {{ workout.workout_type }} - {{ workout.workout_id }}
-        <button (click)="selectWorkout(workout)">Edit</button>
-        <button (click)="deleteWorkout(workout.workout_id)">Delete</button>
+        <div class="buttons">
+          <button class="edit-button" (click)="selectWorkout(workout)">Edit</button>
+          <button class="delete-button" (click)="deleteWorkout(workout.workout_id)">Delete</button>
+        </div>
       </li>
     </ul>
   

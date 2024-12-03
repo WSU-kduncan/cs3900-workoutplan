@@ -5,8 +5,10 @@
     <ul>
       <li *ngFor="let runner of runners">
         {{ runner.name }} - {{ runner.email }}
-        <button (click)="selectRunner(runner)">Edit</button>
-        <button (click)="deleteRunner(runner.runner_id)">Delete</button>
+        <div class="buttons">
+          <button class="edit-button" (click)="selectRunner(runner)">Edit</button>
+          <button class="delete-button" (click)="deleteRunner(runner.runner_id)">Delete</button>
+        </div>
       </li>
     </ul>
   
