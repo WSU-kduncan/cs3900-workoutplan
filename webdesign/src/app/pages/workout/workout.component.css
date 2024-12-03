@@ -5,16 +5,18 @@
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: #313199;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+    border: #258cb8 3px solid;
 }
 
 .workout-item span {
     flex-grow: 1;
     font-size: 18px;
     font-weight: 600;
-    color: #333;
+    color: #d7e0d9;
 }
 
 .buttons {
@@ -23,8 +25,8 @@
 }
 
 button.edit-button {
-    background-color: #ffc107 !important; 
-    color: white !important;
+    background-color: #b88c33 !important; 
+    color: #d7e0d9 !important;
     padding: 8px 16px;
     font-size: 14px;
     border: none;
@@ -34,13 +36,15 @@ button.edit-button {
 }
 
 button.edit-button:hover {
-    background-color: #e0a800 !important; 
+    background-color: #ebdf42 !important; 
+    color: #101114 !important;
     transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 
 button.delete-button {
-    background-color: #dc3545 !important; 
+    background-color: #991f2f !important; 
     color: white !important;
     padding: 8px 16px;
     font-size: 14px;
@@ -51,13 +55,13 @@ button.delete-button {
 }
 
 button.delete-button:hover {
-    background-color: #c82333 !important; 
+    background-color: #e53737 !important; 
     transform: scale(1.05);
 }
 
 
 .workout-item:hover {
-    background-color: #e9ecef;
+    background-color: #543fe0;
     transform: scale(1.02);
 }
 
@@ -65,13 +69,19 @@ button.delete-button:hover {
 div > input {
     padding: 8px 12px;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    background-color: #585c5b;
+    color: #fcfff2;
+    border: 2px solid #28628f;
     border-radius: 4px;
+    transition: background 0.3s ease;
 }
 
+div > input:hover, div > input:focus {
+    background-color: #3b3d3d;
+}
 div > button {
     padding: 8px 15px;
-    background-color: #28a745;
+    background-color: #227a2e;
     color: white;
     border: none;
     border-radius: 4px;
@@ -80,7 +90,7 @@ div > button {
 }
 
 div > button:hover {
-    background-color: #218838;
+    background-color: #2cb82c;
 }
 
 div > input:focus {

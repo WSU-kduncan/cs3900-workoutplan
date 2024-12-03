@@ -3,19 +3,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f5f5f5;
 }
 
   /* Heading Styles */
 h1 {
-    color: #333;
     text-align: center;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: #555;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #d7e0d9;
     padding-bottom: 5px;
 }
 
@@ -26,14 +23,19 @@ ul {
 }
 
 li {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #313199;
+    border: 2px solid #258cb8;
+    color: #d7e0d9;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease;
+}
+li:hover{
+    background-color: #543fe0;
 }
 
   /* Button Styling */
@@ -45,57 +47,76 @@ button {
     font-size: 14px;
 }
 
-button:hover {
-    opacity: 0.8;
-}
-
 button:disabled {
-    background-color: #ccc;
+    background-color: #d7e0d9;
     cursor: not-allowed;
 }
 
   /* Specific Button Styles */
 button[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #227a2e;
+    color: #fcfff2;
+}
+
+button[type="submit"]:hover {
+    background-color: #2cb82c;
 }
 
 button[type="submit"]:disabled {
-    background-color: #a5d6a7;
+    background-color: #1d522b;
 }
 
 button:not([type="submit"]) {
-    background-color: #2196f3;
-    color: #fff;
+    background-color: #b88c33;
+    color: #d7e0d9;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+button:not([type="submit"]):hover {
+    background-color: #ebdf42;
+    color: #101114;
     margin-left: 5px;
 }
 
 button:not([type="submit"]):last-of-type {
-    background-color: #f44336;
+    background-color: #991f2f;
+    color: #d7e0d9;
+}
+
+button:not([type="submit"]):last-of-type:hover {
+    background-color: #e53737;
+    color: #d7e0d9;
+    transition: background-color 0.3s ease;
 }
 
   /* Form Styling */
 form {
-    background-color: #fff;
+    background-color: #313199;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #258cb8;
     border-radius: 5px;
     margin-top: 15px;
 }
-
+form div small{
+    color: #e53737;
+}
 input[type="number"],
 input[type="text"] {
     width: calc(33.3% - 10px);
     padding: 8px;
     margin: 5px 5px 15px 0;
     border: 1px solid #ddd;
+    background-color: #585c5b;
     border-radius: 3px;
     font-size: 14px;
+    color: #d7e0d9;
+    transition: background-color 0.3s ease;
 }
 
 input[type="number"]:focus,
-input[type="text"]:focus {
-    border-color: #2196f3;
-    outline: none;
+input[type="text"]:focus,
+input[type="number"]:active,
+input[type="text"]:active {
+    background-color: #3b3d3d;
 }
 
