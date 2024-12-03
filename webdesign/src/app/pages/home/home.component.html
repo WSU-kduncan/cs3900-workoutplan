@@ -1,30 +1,28 @@
-<body>
-    <div class="home-container">
-        <h1>Welcome to the <em>efficient</em> way to train!</h1>
-        <p>We keep track of your excercises so you can do track!™</p>
+<div class="home-container">
+    <h1>Welcome to the <em>efficient</em> way to train!</h1>
+    <p>We keep track of your excercises so you can do track!™</p>
 
 
-        <!-- Buttons -->
-        <button (click)="toggleAddWorkoutForm()">Add Workout Type</button>
-        <button (click)="toggleEditRunnerForm()">Add Runner</button>
-        <button (click)="toggleDeleteWorkoutForm()">Log Run</button>
+    <!-- Buttons -->
+    <button (click)="toggleAddWorkoutForm()">Add Workout Type</button>
+    <button (click)="toggleEditRunnerForm()">Add Runner</button>
+    <button (click)="toggleDeleteWorkoutForm()">Log Run</button>
 
-        <!-- Add Workout Form -->
-        <div *ngIf="showAddWorkoutForm" class="workout-form">
-            <p>TODO: Add Workout Form Here</p>
-        </div>
-
-        <!-- Edit Workout Form -->
-        <div *ngIf="showEditRunnerForm" class="workout-form">
-            <p>TODO: Edit Workout Form Here</p>
-        </div>
-
-        <!-- Log Run Form -->
-        <div *ngIf="showLogWorkoutForm" class="workout-form">
-            <p>TODO: Delete Workout Form Here</p>
-            
-        </div>
-
-        <!-- TODO: Add other features here as necessary like evaluations and workouts -->
+    <!-- Add Workout Form -->
+    <div *ngIf="showAddWorkoutForm" class="workout-form">
+        <p>TODO: Add Workout Form Here</p>
     </div>
-</body>
+
+    <!-- Edit Workout Form -->
+    <div *ngIf="showEditRunnerForm" class="workout-form">
+        <p>TODO: Edit Workout Form Here</p>
+    </div>
+
+    <!-- Log Run Form -->
+    <div *ngIf="showLogWorkoutForm" class="workout-form">
+        <p>TODO: Delete Workout Form Here</p>
+        
+    </div>
+
+    <!-- TODO: Add other features here as necessary like evaluations and workouts -->
+</div>
