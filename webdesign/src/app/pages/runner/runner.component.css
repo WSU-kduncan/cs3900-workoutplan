@@ -33,6 +33,8 @@ li {
     border: #258cb8 3px solid;
     width: 95%;
     color: #d7e0d9;
+    font-size: 18px;
+    font-weight: 600;
 }
 li:hover {
     background-color: #543fe0;
