@@ -1,0 +1,18 @@
+html{
+    background-color: #272829;
+  }
+  
+h1 {
+    color: #7fbef5;
+}
+h2{
+    color: #fcfff2;
+}
+h3, p{
+    color:  #d7e0d9;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}

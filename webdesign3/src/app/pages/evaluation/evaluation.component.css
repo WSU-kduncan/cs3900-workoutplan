@@ -1,0 +1,78 @@
+.evaluation-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #313199;
+    border: 2px solid #258cb8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.evaluation-container h1 {
+    text-align: center;
+    color: #fcfff2;
+    margin-bottom: 1.5rem;
+}
+
+.evaluation-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.evaluation-container label {
+    font-weight: bold;
+    color: #d7e0d9;
+    margin-bottom: 0.25rem;
+}
+
+.evaluation-container input,
+.evaluation-container select,
+.evaluation-container textarea {
+    padding: 0.5rem;
+    border: 1px solid #d7e0d9;
+    border-radius: 4px;
+    background-color: #585c5b;
+    color: #d7e0d9;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.evaluation-container input:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+.evaluation-container span {
+    font-size: 0.9rem;
+    color: #d7e0d9;
+    margin-left: 0.5rem;
+}
+
+.evaluation-container textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.evaluation-container button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #227a2e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.evaluation-container button:hover {
+    background-color: #2cb82c;
+}
+
+.evaluation-container button:disabled {
+    background-color: #1d522b;
+    cursor: not-allowed
+}
