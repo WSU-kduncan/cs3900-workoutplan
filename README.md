@@ -20,3 +20,8 @@
     * To start up run: `ng serve`
 
 ## Future Works
+ * Make a table which displays all the workouts a particular runner has completed once the evaluation is finished
+ * Make a table for the coach which displays all the workouts from every runner
+ * Allow workouts to be sorted/filtered
+ * Connect the endpoints for Evaluation and Workouts to the frontend
+ * Make into a mobile app
