@@ -21,8 +21,4 @@ describe('UserComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  //it('correct number of runners initalized', () =>{
-    //expect(RunnerService.runners[].length=4).toBeFalsy();
-
-//})
 });

@@ -2,19 +2,24 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router'; 
 import { CommonModule } from '@angular/common';
+import { start } from 'node:repl';
 
 
 @Component({
   selector: 'app-evaluation',
   templateUrl: './evaluation.component.html',
   styleUrls: ['./evaluation.component.css'],
-  imports: [FormsModule, CommonModule, ],
+  imports: [FormsModule, CommonModule, ReactiveFormsModule],
   standalone:true
 })
+
+
+
 export class EvaluationComponent implements OnInit {
+  evaluationForm: FormGroup;
   runner_id!: number;
   workout_id!: number;
   evaluation_date!: Date;
@@ -26,6 +31,8 @@ export class EvaluationComponent implements OnInit {
   average_heart_rate!: number;
   feel_score_rating!: number;
   comments!: string;
+  workoutName!: string;
+  runnerName!: string;
 
   state_codes: string[] = [
     'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID',
@@ -37,13 +44,28 @@ export class EvaluationComponent implements OnInit {
 
   feel_score_ratings: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
-
+  constructor(private route: ActivatedRoute, private router: Router, private fb: FormBuilder
+  ) {
+    // Initialize the reactive form with validation
+    this.evaluationForm = this.fb.group({
+      evaluationDate: ['', Validators.required],
+      city: ['', Validators.required],
+      stateCode: ['', Validators.required],
+      startTime: ['', Validators.required],
+      endTime: ['', Validators.required],
+      distance: [0, [Validators.required, Validators.min(0)]],
+      averageHeartRate: [0, [Validators.required, Validators.min(0)]],
+      feelScoreRating: [0, [Validators.required, Validators.min(0)]],
+      comments: ['', Validators.required],
+    });
+  }
   ngOnInit(): void {
     // Retrieve parameters from the route
     this.route.params.subscribe(params => {
       this.runner_id = +params['runner_id'];
       this.workout_id = +params['workout_id'];
+      this.workoutName = params['workoutName'];
+      this.runnerName = params['runnerName'];
       console.log(`Runner ID: ${this.runner_id}, Workout ID: ${this.workout_id}`);
     });
   }

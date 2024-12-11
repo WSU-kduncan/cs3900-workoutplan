@@ -20,9 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
-
+  
 
 import static com.wsu.workoutservice.utilities.Constants.MESSAGE;
 import static com.wsu.workoutservice.utilities.Constants.PAGE_COUNT;

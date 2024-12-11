@@ -1,3 +1,5 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { Runner } from '../../models/runner.model';
 import { CommonModule } from '@angular/common';
@@ -29,8 +31,9 @@ export class RunnerComponent implements OnInit {
     // Initialize the reactive form with validation
     this.runnerForm = this.fb.group({
       id: [0, [Validators.required, Validators.min(1)]],
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]
+      email: ['', [Validators.required, Validators.email]],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required]
     });
   }
 
@@ -44,38 +47,45 @@ export class RunnerComponent implements OnInit {
 
   selectRunner(runner: Runner) {
     this.selectedRunner = runner;
-    this.runnerForm.patchValue(runner); // Populate the form with the selected runner’s data
+    this.runnerForm.patchValue(runner); 
   }
 
-  addRunner() {
+  async addRunner() {
     if (this.runnerForm.invalid) return;
 
     this.isLoading = true;
     const newRunner: Runner = this.runnerForm.value;
 
     this.runnerService.addRunner(newRunner);
+    this.runners.length = 0;
+    await new Promise(resolve => setTimeout(resolve, 1000));
     this.loadRunners();
     this.resetForm();
   }
 
-  deleteRunner(runner_id: number) {
-    this.runnerService.deleteRunner(runner_id);
+  async deleteRunner(runner: Runner) {
+    console.log(runner.id);
+    this.runnerService.deleteRunner(runner.id);
+    this.runners.length = 0;
+    await new Promise(resolve => setTimeout(resolve, 1000));
     this.loadRunners();
   }
 
-  updateRunner() {
+  async updateRunner() {
     if (this.runnerForm.invalid || !this.selectedRunner) return;
 
     this.isLoading = true;
     const updatedRunner: Runner = { ...this.selectedRunner, ...this.runnerForm.value };
 
     this.runnerService.updateRunner(updatedRunner);
+    this.runners.length = 0;
+    await new Promise(resolve => setTimeout(resolve, 1000));
     this.loadRunners();
     this.resetForm();
   }
 
   resetForm() {
-    this.runnerForm.reset({ runner_id: 0, name: '', email: '' });
+    this.runnerForm.reset({ runner_id: 0, firstName: '', lastName: '', email: '' });
     this.selectedRunner = null;
     this.isLoading = false;
   }
@@ -85,10 +95,19 @@ export class RunnerComponent implements OnInit {
   }
 
   get name() {
-    return this.runnerForm.get('name');
+    return this.firstName + " " + this.lastName;
+  }
+  get firstName(){
+    return this.runnerForm.get('firstName');
+  }
+  
+  get lastName(){
+    return this.runnerForm.get('lastName');
   }
 
   get email() {
     return this.runnerForm.get('email');
   }
+  
 }
+

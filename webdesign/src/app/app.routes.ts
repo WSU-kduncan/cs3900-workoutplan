@@ -6,7 +6,6 @@ import { LogComponent } from './pages/log/log.component';
 import { EvaluationComponent } from './pages/evaluation/evaluation.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WorkoutComponent } from './pages/workout/workout.component';
-import { SavedWorkoutsComponent } from './pages/saved-workouts/saved-workouts.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,7 +14,6 @@ export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'log', component: LogComponent},
-  {path : 'saved-workouts', component: SavedWorkoutsComponent},
   //{ path: 'evaluation', component: EvaluationComponent}
-  { path: 'evaluation/:runner_id/:workout_id', component: EvaluationComponent },
+  { path: 'evaluation/:runner_id/:workout_id/:workoutName/:runnerName', component: EvaluationComponent },
 ];

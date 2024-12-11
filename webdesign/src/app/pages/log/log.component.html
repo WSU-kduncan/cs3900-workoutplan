@@ -4,7 +4,7 @@
 
     <label for="runner-select">Select Runner:</label>
     <select id="runner-select" [(ngModel)]="selectedRunnerId">
-      <option *ngFor="let runner of runners" [value]="runner.runner_id">{{ runner.name }}</option>
+      <option *ngFor="let runner of runners" [value]="runner.id ">{{ runner.firstName }} {{ runner.lastName }}</option>
     </select>
   
   

@@ -2,58 +2,56 @@
 <div class="evaluation-container">
     <h1>Evaluation</h1>
 
-    <form>
-        <!-- Runner ID and Workout ID (Disabled Fields) -->
-        <label for="runner-id">Runner ID:</label>
-        <input id="runner-id" type="number" [value]="runner_id" disabled />
+    <form [formGroup]="evaluationForm">
+        <!-- Runner name and Workout name (Disabled Fields) -->
+        <label>Runner Name: <u>{{ runnerName }}</u></label>
 
-        <label for="workout-id">Workout ID:</label>
-        <input id="workout-id" type="number" [value]="workout_id" disabled />
+        <label>Workout: <u>{{ workoutName }}</u></label>
 
         <!-- Evaluation Date -->
         <label for="evaluation-date">Evaluation Date:</label>
-        <input id="evaluation-date" type="date" [(ngModel)]="evaluation_date" name="evaluationDate" />
+        <input id="evaluation-date" type="date" [(ngModel)]="evaluation_date" formControlName="evaluationDate" />
 
         <!-- City -->
         <label for="city">City:</label>
-        <input id="city" type="text" [(ngModel)]="city" name="city" />
+        <input id="city" type="text" [(ngModel)]="city" formControlName="city" />
 
         <!-- State Code (Dropdown Menu) -->
         <label for="state-code">State:</label>
-        <select id="state-code" [(ngModel)]="state_code" name="stateCode">
+        <select id="state-code" [(ngModel)]="state_code" formControlName="stateCode">
            <option *ngFor="let state of state_codes" [value]="state">{{ state }}</option>
         </select>
 
         <!-- Start Time -->
         <label for="start-time">Start Time:</label>
-        <input id="start-time" type="time" [(ngModel)]="start_time" name="startTime" />
+        <input id="start-time" type="time" [(ngModel)]="start_time" formControlName="startTime" />
 
         <!-- End Time -->
         <label for="end-time">End Time:</label>
-        <input id="end-time" type="time" [(ngModel)]="end_time" name="endTime" />
+        <input id="end-time" type="time" [(ngModel)]="end_time" formControlName="endTime" />
 
         <!-- Distance -->
         <label for="distance">Distance:</label>
-        <input id="distance" type="number" [(ngModel)]="distance" name="distance" />
+        <input id="distance" type="number" [(ngModel)]="distance" formControlName="distance" />
         <span>miles</span>
 
         <!-- Average Heart Rate -->
         <label for="average-heart-rate">Average Heart Rate:</label>
-        <input id="average-heart-rate" type="number" [(ngModel)]="average_heart_rate" name="averageHeartRate" />
+        <input id="average-heart-rate" type="number" [(ngModel)]="average_heart_rate" formControlName="averageHeartRate" />
         <span>bpm</span>
 
         <!-- Feel Score Rating -->
         <label for="feel-score-rating">Feel Score Rating:</label>
-        <select id="feel-score-rating" [(ngModel)]="feel_score_rating" name="feelScoreRating">
+        <select id="feel-score-rating" [(ngModel)]="feel_score_rating" formControlName="feelScoreRating">
          <option *ngFor="let rating of feel_score_ratings" [value]="rating">{{ rating }}</option>
         </select>
 
         <!-- Comments -->
         <label for="comments">Comments:</label>
-        <textarea id="comments" [(ngModel)]="comments" name="comments"></textarea>
+        <textarea id="comments" [(ngModel)]="comments" formControlName="comments"></textarea>
 
         <!-- Submit Button -->
-        <button type="button" (click)="submitEvaluation()">Submit</button>
+        <button type="button" [disabled]="evaluationForm.invalid" (click)="submitEvaluation()">Submit</button>
     </form>
 </div>
 

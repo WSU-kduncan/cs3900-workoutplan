@@ -2,15 +2,15 @@
     max-width: 600px;
     margin: 2rem auto;
     padding: 1.5rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #313199;
+    border: 2px solid #258cb8;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .evaluation-container h1 {
     text-align: center;
-    color: #333;
+    color: #fcfff2;
     margin-bottom: 1.5rem;
 }
 
@@ -22,7 +22,7 @@
 
 .evaluation-container label {
     font-weight: bold;
-    color: #555;
+    color: #d7e0d9;
     margin-bottom: 0.25rem;
 }
 
@@ -30,8 +30,10 @@
 .evaluation-container select,
 .evaluation-container textarea {
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #d7e0d9;
     border-radius: 4px;
+    background-color: #585c5b;
+    color: #d7e0d9;
     font-size: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -44,7 +46,7 @@
 
 .evaluation-container span {
     font-size: 0.9rem;
-    color: #666;
+    color: #d7e0d9;
     margin-left: 0.5rem;
 }
 
@@ -58,17 +60,19 @@
     font-size: 1rem;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color: #227a2e;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .evaluation-container button:hover {
-    background-color: #0056b3;
+    background-color: #2cb82c;
 }
 
-.evaluation-container button:active {
-    background-color: #004085;
+.evaluation-container button:disabled {
+    background-color: #1d522b;
+    cursor: not-allowed
 }

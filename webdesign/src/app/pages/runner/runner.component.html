@@ -1,17 +1,8 @@
-<div class="runner-container">
-    <h1>Runner Management</h1>
 
-    <h2>Runner List</h2>
-    <ul>
-      <li *ngFor="let runner of runners">
-        {{ runner.name }} - {{ runner.email }}
-        <div class="buttons">
-          <button class="edit-button" (click)="selectRunner(runner)">Edit</button>
-          <button class="delete-button" (click)="deleteRunner(runner.runner_id)">Delete</button>
-        </div>
-      </li>
-    </ul>
-  
+
+ <div class="runner-container">
+    <h1>Runner Management</h1>
+    
     <h2>{{ selectedRunner ? 'Edit Runner' : 'Add New Runner' }}</h2>
     <form [formGroup]="runnerForm" (ngSubmit)="selectedRunner ? updateRunner() : addRunner()">
       <input
@@ -26,13 +17,20 @@
   
       <input
         type="text"
-        formControlName="name"
-        placeholder="Name"
+        formControlName="firstName"
+        placeholder="First Name"
       />
-      <div *ngIf="name?.invalid && (name?.dirty || name?.touched)">
-        <small *ngIf="name?.errors?.['required']">Name is required.</small>
+      <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)">
+        <small *ngIf="firstName?.errors?.['required']">First name is required.</small>
       </div>
-  
+      <input
+            type="text"
+            formControlName="lastName"
+            placeholder="Last Name"
+          />
+          <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">
+            <small *ngIf="lastName?.errors?.['required']">Last name is required.</small>
+          </div>
       <input
         type="text"
         formControlName="email"
@@ -47,9 +45,17 @@
         {{ selectedRunner ? 'Update' : 'Add' }} Runner
       </button>
     </form>
+    <h2>Runner List</h2>
+    <ul>
+      <li *ngFor="let runner of runners" class="workout-item">
+        <span>{{ runner.firstName }} {{ runner.lastName }} - {{ runner.email }}</span>
+        <div class="buttons">
+            <button class="edit-button" (click)="selectRunner(runner)">Edit</button>
+            <button class="delete-button" (click)="deleteRunner(runner)">Delete</button>
+        </div>
+      </li>
+    </ul>
   
-    <!-- Loading Spinner -->
+  
     <div *ngIf="isLoading" class="spinner">Loading...</div>
   </div>
-
-  
