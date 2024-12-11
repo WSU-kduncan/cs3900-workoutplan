@@ -13,10 +13,10 @@
 4. UIUX
     * [UIIX](https://github.com/WSU-kduncan/cs3900-workoutplan/tree/main/uiux)
 5. Microservices
-    * [Microservices](add later)
+    * [Microservices](https://github.com/WSU-kduncan/cs3900-workoutplan/tree/main/microservices)
     * To start up run in vscode (You may be asked to click on it at the top)
 6. Web Design
-    * [Web Design](add later)
+    * [Web Design](https://github.com/WSU-kduncan/cs3900-workoutplan/tree/main/webdesign)
     * To start up run: `ng serve`
 
 ## Future Works
