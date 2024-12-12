@@ -29,7 +29,7 @@
 5. Users can delete a runner by clicking the desired runner's "Delete" button in the "Runners" page.
 
 ## Future Works
- * _Create a completed workout table_
+ * __Create a completed workout table__
    
    Create a basic table overview which can display a runner's completed workouts after the evaluation is completed. Table will be designed so that it can be filtered by different workouts, length of run, time, etc.
 
