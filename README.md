@@ -48,9 +48,3 @@
 * __Create mobile app__
 
    Design, program, and publish a mobile app version of Workout Plan. Develeoping a mobile app would be our projects end goal as this would be the most effecient way to use Workout Plan. Runners want to be able to quickly save their data after a run and its tough to do that when you have to wait till your home to update your workouts.
-
- * Make a table which displays all the workouts a particular runner has completed once the evaluation is finished
- * Make a table for the coach which displays all the workouts from every runner
- * Allow workouts to be sorted/filtered
- * Connect the endpoints for Evaluation and Workouts to the frontend
- * Make into a mobile app
